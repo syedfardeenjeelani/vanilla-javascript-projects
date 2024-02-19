@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Description App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200 font-poppins">
+    <header class="p-4 flex justify-start bg-gray-800">
+      <form id="form">
+        <input
+          type="text"
+          id="search"
+          class="bg-gray-200 text-gray-900 rounded-md px-4 py-2"
+          placeholder="Search"
+        />
+      </form>
+    </header>
+    <main id="main" class="flex flex-wrap p-4">
+      <div
+        class="movie w-72 m-4 bg-gray-800 shadow-lg relative overflow-hidden rounded"
+      >
+        <img
+          class="img"
+          src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
+          alt=""
+        />
+        <div
+          class="movie-info text-white flex justify-between items-center px-4 py-2.5"
+        >
+          <h3 class="title">Movie Title</h3>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
