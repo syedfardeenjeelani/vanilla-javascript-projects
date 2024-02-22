@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", sans-serif;
+  background-color: #516dff;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+h1 {
+  line-height: 1.4;
+}
+
+.btn {
+  border: 0;
+  background-color: white;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:focus {
+  outline: 0;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0;
+  transition: margin-top 1s ease-in-out;
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+#lastscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 0;
+  transition: margin-top 1s ease-in-out;
+  background-color: #fff;
+  position: relative;
+  /* background-image: url(https://static.vecteezy.com/system/resources/thumbnails/003/303/295/small/mountains-background-game-vector.jpg); */
+}
+#lastscreen.up {
+  margin-top: -100vh;
+}
+
+#fatcat {
+  display: none;
+}
+#fatcat.move {
+  display: flex;
+  width: 150px;
+  position: relative;
+  top: 210px;
+  right: 0px;
+  animation: fatcat 50s infinite;
+}
+@keyframes fatcat {
+  0% {
+    right: 480px;
+  }
+  100% {
+    right: -40px;
+  }
+}
+
+.hidden {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hidden.visible {
+  display: none;
+}
+
+.hiddenvideo {
+  display: none;
+}
+.hiddenvideo.visible {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.insects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.insects-list li {
+  margin: 10px;
+}
+
+.choose-insect-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.ansbtn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+  margin-left: 290px;
+}
+
+.ansbtn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+.btns {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+  margin-left: 290px;
+}
+.btns:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-insect-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-insect-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-insect-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.game-container {
+  position: relative;
+}
+
+#time,
+#score {
+  position: absolute;
+  top: 20px;
+}
+#time {
+  left: 20px;
+}
+#score {
+  right: 20px;
+}
+
+.samay,
+.raina {
+  color: black;
+  position: absolute;
+  top: 20px;
+}
+.samay {
+  left: 20px;
+}
+.raina {
+  right: 20px;
+}
+
+#lastbtnn {
+  width: 120px;
+  height: 45px;
+  border-radius: 50px;
+  box-shadow: black;
+}
+
+#lastbtnn.remove {
+  display: none;
+}
+
+.insect {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+.insect img {
+  width: 100px;
+  height: 100px;
+}
+.insectt {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.insectt.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+.insectt img {
+  width: 100px;
+  height: 100px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+}
+
+.img {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+  display: none;
+}
+
+.img.visible {
+  display: flex;
+}
+
+.img.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#right {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100px;
+  height: 30px;
+}
+#right:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+#wrong {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100px;
+  height: 30px;
+}
+#wrong:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+#lost {
+  display: none;
+}
+#lost.visible {
+  display: flex;
+  color: black;
+}
+
+#lastvideo {
+  width: 90vw;
+  height: 90vh;
+}
