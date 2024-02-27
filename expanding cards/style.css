@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 95vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  color: #ffffff;
+}
+
+.panel h3 {
+  font-size: 23px;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 3;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+.panel.aactive {
+  flex: 1;
+}
